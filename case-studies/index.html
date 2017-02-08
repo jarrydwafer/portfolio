@@ -1,0 +1,30 @@
+---
+layout: category
+title: Case Studies
+permalink: /case-studies/
+unique-id: cat-case-studies
+---
+
+<div class="case-studies">
+  <div class="case-studies-content">
+    <p>In an effort to better understand the impact of my recent projects and give back to the dev / design community, I will be writing case studies, creating short tutorials, and sharing code pens and git repositories.</p>
+    <ul class="post-list home-case-studies">
+      {% for post in site.categories.case-studies %}
+        <li>
+          <h2>
+            <a class="home-case-studies-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h2>
+        </li>
+      {% endfor %}
+    </ul>
+    <ul class="post-list home-case-studies">
+      {% for post in site.categories.tutorials %}
+        <li>
+          <h2>
+            <a class="home-case-studies-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h2>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

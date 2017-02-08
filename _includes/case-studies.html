@@ -1,0 +1,8 @@
+<ul>
+  {% for post in site.categories.case-studies %}
+    {% if post.url %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+  <li><a href="#">Articles, Tutorials, and Shared Resources</a></li>
+</ul>
