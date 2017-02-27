@@ -39,7 +39,7 @@ $(document).ready(function() {
       $('.fixed-header').removeClass('nav-down').addClass('nav-up');
     } else {
       if(st + $(window).height() < $(document).height()) {
-        $('.fixed-header').removeClass('nav-up').addClass('nav-down');
+        $('.fixed-header').removeClass('nav-up').addClass('nav-down').css('border-top', '0');
       }
     }
 
@@ -107,3 +107,15 @@ $(window).on('scroll', function () {
     });
   }
 });
+
+//
+//
+// Function to start with page nav down
+select = function(s) {
+  return document.querySelector(s);
+};
+var addHeader = function() {
+  var header = select('.fixed-header');
+  header.classList.remove('nav-up');
+  header.classList.add('nav-down');
+}

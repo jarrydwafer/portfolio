@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Case Study: Customer.io Design Project"
+title:  "Customer.io UX Design Project"
 unique-id: "case-study-4"
 date:   2017-1-18 18:11:00 -0800
-categories: case-studies
+categories: tutorial
 ---
 
 To wrap up this design homework, I planned to pull everything together in a quick post to make it easy for review. So far I have spent about two and a half hours on the challenge and I will spend no more than 30 minutes getting this live - hopefully without too many typos.

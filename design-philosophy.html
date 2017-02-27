@@ -1,0 +1,112 @@
+---
+layout: default
+---
+
+<div class="design-philosophy">
+  <div class="loadfix">
+  </div>
+
+  <div class="design-philosophy-full-width-graphic-window full-width-graphic-window">
+  </div>
+  <div class="design-philosophy-full-width-graphic-holder full-width-graphic-holder parallax">
+  </div>
+
+  <main class="page-content page-home" aria-label="Content">
+    <div class="wrapper">
+
+      <div class="design-philosophy home-section" id="design-philosophy">
+        <h2 class="section-title design-philosophy-section-title">Design Philosophy</h2>
+        <p>
+          We are all operating systems. And we are all capable of an infinite amount of configurations. We get to choose how we upgrade our personal OS by deciding what we learn, how we will use that knowledge, and how we communicate to others what we have come to understand. I am a UX/UI Designer, who loves to design & code, with aspirations to take great projects from conception to production.</p>
+        <p>
+          When presented with a problem, I am driven to research, design, develop, and then dive into the data to find great user-centric solutions. My education stems from a Graphic Design BFA at the University of Notre Dame. My focus is understanding how people interact with designs and interfaces to come up with user focused solutions to make them better. And my intellectual passion aligns with the quickly evolving landscape of website development and front-end technologies.
+        </p>
+        <p>
+          For me, design is a process. And it should always be an insightful, user-centric process. Great designers have a way of approaching problems from many different perspectives to understand users and come up with multifaceted, user focused solutions.
+        </p>
+        <p>
+          And great design does not exist in isolation; it is a reflection of the larger society. <i>As society changes, so should design</i>. The best designers iterate their designs to keep pace with society’s demands.
+        </p>
+        <p>
+          UX designers have trained their operating systems to research, brainstorm, design, prototype, user-test, build, test, observe and iterate. And it can be a complicated series of events. To do that most efficiently, you have to stay up with new trends, tools, methodologies, and technologies.
+        </p>
+        <p>
+          This is why I love the dynamic landscape of the web. I am captivated with the creative ways in which designers and developers are shaping our digital future. It is inspiring and will be one of our most powerful instruments of change to build a better world for each other.
+        </p>
+        <p>
+          And which businesses value design thinking the most? Tech. Where people like you and I meet to shape our future together.
+        </p>
+        <p>
+          My name is Jarryd Wafer and I am a UX designer, an artist, and a problem solver bursting at the seams with creative solutions. Lets connect and make our operating systems instruments of change.
+        </p>
+      </div>
+
+      <div class="case-studies home-section min">
+        <h2 class="section-title case-studies-section-title">
+          <a href="javascript:void(0)">Case Studies</a>
+        </h2>
+        <div class="case-studies-content">
+          <p>In an effort to better understand the impact of my recent projects and give back to the dev / design community, I will be writing case studies, creating short tutorials, and sharing code pens and git repositories.</p>
+          <ul class="post-list home-case-studies">
+            {% for post in site.categories.case-studies %}
+              <li>
+                <h2>
+                  <a class="home-case-studies-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                </h2>
+              </li>
+            {% endfor %}
+          </ul>
+          <ul class="post-list home-case-studies">
+            {% for post in site.categories.tutorials %}
+              <li>
+                <h2>
+                  <a class="home-case-studies-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                </h2>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="ux-toolset home-section min">
+        <h2 class="section-title toolset-section-title"><a href="/ux-toolset.html">UX Toolset</a></h2>
+      </div>
+
+      <div class="get-in-touch home-section min">
+        <h2 class="section-title contact-section-title"><a href="javascript:void(0)" class="contact-page-link">Let's connect</a></h2>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script type="text/javascript">
+  addHeader();
+  $(window).on('scroll', function() {
+    var hero = $('.full-width-graphic-window');
+    var height = hero.outerHeight();
+    var scrollTop = $(this).scrollTop();
+    var rangeOffset = 100;
+    var calc = 0 + scrollTop / (height - rangeOffset);
+
+    hero.css({ 'opacity': calc });
+
+    if ( calc > '1' ) {
+      hero.css({ 'opacity': 1 });
+    } else if ( calc < '0' ) {
+      hero.css({ 'opacity': 0 });
+    }
+
+    // Parralax for home image - should clean up function
+    var parallax = document.querySelectorAll(".parallax"),
+        speed = 0.1;
+
+    [].slice.call(parallax).forEach(function(el,i){
+
+      var windowYOffset = window.pageYOffset,
+          elBackgrounPos = "50% " + (-50 - (windowYOffset * speed)) + "px";
+
+      el.style.backgroundPosition = elBackgrounPos;
+
+    });
+  });
+</script>

@@ -5,17 +5,6 @@ layout: default
 <div class="home">
 
   <div id="get-started">
-    <nav class="get-started-nav">
-        <a href="/">
-          <h1 class="get-started-header">Jarryd Wafer</h1>
-        </a>
-        <ul class="get-started-nav-list">
-          <li class="get-started-nav-list-item"><a href="javascript:void(0)" class="get-started-nav-list-item-link nav-list-about">Design Philosophy</a></li>
-          <li class="get-started-nav-list-item"><a href="javascript:void(0)" class="get-started-nav-list-item-link nav-list-deck">Case Studies</a></li>
-          <li class="get-started-nav-list-item"><a href="ux-toolset.html" class="get-started-nav-list-item-link nav-list-toolset">UX Toolset</a></li>
-          <li class="get-started-nav-list-item contact"><a href="javascript:void(0)" target="blank" class="get-started-nav-list-item-link contact-page-link">Contact</a></li>
-        </ul>
-    </nav>
 
     <div class="loadfix">
     </div>
@@ -26,15 +15,15 @@ layout: default
       </div>
 
       <p class="get-started-callout">
-        You are an operating system.<br>
-        And you can upgrade for free at any time.
+        UX/UI Designer & Web Developer<br>
+        Located in Santa Barbara, CA.
       </p>
     </div>
   </div>
 
-  <div class="home-full-width-graphic-window">
+  <div class="home-full-width-graphic-window full-width-graphic-window">
   </div>
-  <div class="home-full-width-graphic-holder parallax">
+  <div class="home-full-width-graphic-holder full-width-graphic-holder parallax">
 
   </div>
 
@@ -42,34 +31,27 @@ layout: default
     <div class="wrapper">
 
       <div class="design-philosophy home-section" id="design-philosophy">
-        <h2 class="section-title design-philosophy-section-title">Design Philosophy</h2>
+        <h2 class="section-title design-philosophy-section-title">Surf's up, so let's build something</h2>
         <p>
-          In Raphael's School of Athens a crowd of thinkers are hard at work to uncover the most appropriate way to introduce a complicated new user interface feature. Many scholars believe that this piece of art is a representation of truth acquired through reason. If you take a closer look, I suspect that they are solving a very difficult user experience problem.
+          Welcome to my website friends! I put this project together for both you and I. You see, I want to write tutorials and share code with you. I want to dive deep into some case studies for us both. I want to compile resources and articles for myself.  And I want to give out some of my free photos licensed under Creative Commons Zero on <a href="https://unsplash.com/@thegrowcoalition" target="blank">Unsplash</a> for everyone to use. If you have any questions or would like to learn more, please feel free to reach out and <a href="javascript:void(0)"class="contact-page-link">connect</a>.
         </p>
         <p>
-          You see, we are all operating systems. And we get to choose how we upgrade our personal OS by deciding what we learn, how that influences us, and how we communicate what we have come to understand.
-        </p>
-        <p>
-          UX designers have trained their operating systems to research, brainstorm, design, prototype, user-test, build, test, observe and iterate. And it can be a complicated series of events.
-        </p>
-        <p>
-          Design is a process. And it should be an insightful, user-centric process. Great designers have a way of approaching problems from many different perspectives to understand users and come up with multifaceted, user focused solutions. That is why companies that understand the importance of design thinking to solve problems are the ones that are pushing the boundaries.
-        </p>
-        <p>
-          And great design does not exist in isolation; it is a reflection of the larger society. <i>As society changes, so should design</i>. The best designers iterate their designs to keep pace with society’s demands. To do that, you have to stay up with new trends, tools, methodologies, and technologies.
-        </p>
-        <p>
-          This is why I love the dynamic landscape of the web. I am captivated with the creative ways in which designers and developers are shaping our digital future. It is inspiring and will be one of our most powerful instruments of change to build a better world for each other.
-        </p>
-        <p>
-          And which businesses value design thinking the most? Tech. Where people like you and I meet to shape our future together.
-        </p>
-        <p>
-          My name is Jarryd Wafer and I am a UX designer, an artist, a gardener, and a problem solver bursting at the seams with creative solutions. Lets connect and make our operating systems instruments of change.
+          Without further ado, let's check the swell and see if we can catch a wave and work together. Here are a couple featured projects to get us started:
         </p>
       </div>
 
-      <div class="case-studies home-section min">
+      <div class="home-section home-featured">
+        {% include home-featured.html %}
+      </div>
+
+
+
+
+
+
+
+
+      <div class="case-studies home-section min" style="display: none;">
         <h2 class="section-title case-studies-section-title">
           <a href="javascript:void(0)">Case Studies</a>
         </h2>
@@ -96,15 +78,12 @@ layout: default
         </div>
       </div>
 
-      <div class="ux-toolset home-section min">
-        <h2 class="section-title toolset-section-title"><a href="/ux-toolset.html">UX Toolset</a></h2>
-      </div>
-
-      <div class="get-in-touch home-section min">
-        <h2 class="section-title contact-section-title"><a href="javascript:void(0)" class="contact-page-link">Let's connect</a></h2>
-      </div>
     </div>
   </main>
 </div>
 
 <script src="{{ "/assets/js/home.js" | relative_url }}"></script>
+<script type="text/javascript">
+  addHeader();
+  addHeaderBoarder();
+</script>
