@@ -2,85 +2,10 @@
 layout: default
 ---
 
-<div class="home">
-
-  <div id="get-started">
-
-    <div class="loadfix">
-    </div>
-
-    <div class="get-started-container">
-      <div class="get-started-locomotion">
-        {% include toolset-graphic.html %}
-      </div>
-
-      <p class="get-started-callout">
-        UX/UI Designer & Web Developer<br>
-        Located in Santa Barbara, CA.
-      </p>
-    </div>
-  </div>
-
-  <div class="home-full-width-graphic-window full-width-graphic-window">
-  </div>
-  <div class="home-full-width-graphic-holder full-width-graphic-holder parallax">
-
-  </div>
-
-  <main class="page-content page-home" aria-label="Content">
-    <div class="wrapper">
-
-      <div class="design-philosophy home-section" id="design-philosophy">
-        <h2 class="section-title design-philosophy-section-title">Surf's up, so let's build something</h2>
-        <p>
-          Welcome to my website friends! I put this project together for both you and I. You see, I want to write tutorials and share code with you. I want to dive deep into some case studies for us both. I want to compile resources and articles for myself.  And I want to give out some of my free photos licensed under Creative Commons Zero on <a href="https://unsplash.com/@thegrowcoalition" target="blank">Unsplash</a> for everyone to use. If you have any questions or would like to learn more, please feel free to reach out and <a href="javascript:void(0)"class="contact-page-link">connect</a>.
-        </p>
-        <p>
-          Without further ado, let's check the swell and see if we can catch a wave and work together. Here are a couple featured projects to get us started:
-        </p>
-      </div>
-
-      <div class="home-section home-featured">
-        {% include home-featured.html %}
-      </div>
-
-
-
-
-
-
-
-
-      <div class="case-studies home-section min" style="display: none;">
-        <h2 class="section-title case-studies-section-title">
-          <a href="javascript:void(0)">Case Studies</a>
-        </h2>
-        <div class="case-studies-content">
-          <p>In an effort to better understand the impact of my recent projects and give back to the dev / design community, I will be writing case studies, creating short tutorials, and sharing code pens and git repositories.</p>
-          <ul class="post-list home-case-studies">
-            {% for post in site.categories.case-studies %}
-              <li>
-                <h2>
-                  <a class="home-case-studies-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-                </h2>
-              </li>
-            {% endfor %}
-          </ul>
-          <ul class="post-list home-case-studies">
-            {% for post in site.categories.tutorials %}
-              <li>
-                <h2>
-                  <a class="home-case-studies-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-                </h2>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </main>
+<div class="home-section home-featured">
+  {% include home-featured.html %}
 </div>
+
 
 <script src="{{ "/assets/js/home.js" | relative_url }}"></script>
 <script type="text/javascript">

@@ -6,45 +6,7 @@
 $(document).ready(function() {
   window.setTimeout(function() {
     $('body').addClass('comeatmebruh');
-  }, 1000);
-
-  //
-  //
-  // Fixed header nav
-
-  var didScroll;
-  var lastScrollTop = 0;
-  var delta = 100;
-  var navbarHeight = $('.fixed-header').outerHeight();
-
-  $(window).scroll(function(event){
-    didScroll = true;
-  });
-
-  setInterval(function() {
-    if (didScroll) {
-      hasScrolled();
-      didScroll = false;
-    }
-  }, 250);
-
-  function hasScrolled() {
-    var st = $(this).scrollTop();
-
-    if (Math.abs(lastScrollTop - st) <= delta)
-      return;
-    // if current position > last position AND scrolled past navbar
-    if (st > lastScrollTop && st > navbarHeight){
-      // Header scroll down
-      $('.fixed-header').removeClass('nav-down').addClass('nav-up');
-    } else {
-      if(st + $(window).height() < $(document).height()) {
-        $('.fixed-header').removeClass('nav-up').addClass('nav-down').css('border-top', '0');
-      }
-    }
-
-    lastScrollTop = st;
-  }
+  }, 200);
 
   //
   //
@@ -83,39 +45,3 @@ $(document).ready(function() {
   });
 
 });
-
-//
-//
-// Hero image opacity change
-$(window).on('scroll', function () {
-  var hero = $('.blog-hero');
-  var height = hero.outerHeight();
-  var scrollTop = $(this).scrollTop();
-  var rangeOffset = 160;
-  var calc = 1 - scrollTop / (height - rangeOffset);
-
-  hero.css({
-    'opacity': calc
-  });
-  if (calc > '1'){
-    hero.css({
-      'opacity': 1
-    });
-  } else if (calc < '0'){
-    hero.css({
-      'opacity': 0
-    });
-  }
-});
-
-//
-//
-// Function to start with page nav down
-select = function(s) {
-  return document.querySelector(s);
-};
-var addHeader = function() {
-  var header = select('.fixed-header');
-  header.classList.remove('nav-up');
-  header.classList.add('nav-down');
-}

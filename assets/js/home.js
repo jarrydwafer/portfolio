@@ -43,5 +43,5 @@ $(window).on('scroll', function() {
 
 var addHeaderBoarder = function() {
   var header = select('.fixed-header');
-  header.style.borderTop = '12px solid #232930';
+  header.style.borderTop = 'none';
 }

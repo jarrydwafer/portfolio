@@ -3,7 +3,20 @@
 {% include head.html %}
 <body>
 {% include header.html %}
-{{ content }}
+<div class="content-wrapper">
+  {% include left-nav.html %}
+  <div class="home">
+    <div id="">
+      <div class="loadfix">
+      </div>
+    </div>
+    <main class="page-content page-home" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+  </div>
+</div>
 {% include footer.html %}
 </body>
 {% include google-analytics.html %}

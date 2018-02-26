@@ -46,8 +46,11 @@ body.menu-on {
 
 .contact-top-bg-section {
   background-color: #fafafa;
+  background-image: url('images/full-width-image.jpg');
+  background-size: cover;
+  background-position: center center;
   width: 100vw;
-  height: 200px;
+  height: 350px;
   position: relative;
   top: 0;
   left: 0;
@@ -78,7 +81,7 @@ body.menu-on {
 
 .contact-content-section {
   position: relative;
-  max-width: 535px;
+  max-width: 565px;
   color: #828282;
   margin: 170px auto;
   opacity: 0;

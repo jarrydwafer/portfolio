@@ -14,6 +14,13 @@ $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
+$improveYourEnglishBlack: #242a30;
+$improveYourEnglishDark: #282828;
+$improveYourEnglishGold: #A39369;
+$improveYourEnglishBrown: #282828;
+$improveYourEnglishLight: #F2F2F3;
+$improveYourEnglishLightAlt: #c3bba6;
+
 // Width of the content area
 $content-width:    800px !default;
 $on-palm:          600px !default;
@@ -47,8 +54,6 @@ $device-tablet: 1023px;
   "minima/syntax-highlighting",
   "custom/typography",
   "custom/layout",
-  // Look for better place to put this to render only on pages needed
-  "custom/toolsetgraphic.scss",
   "custom/contact.scss"
 ;
 

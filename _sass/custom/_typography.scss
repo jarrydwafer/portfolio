@@ -1,7 +1,7 @@
 h1, h2, h3, h4, p, li, pre {
   color: #323a45;
   max-width: 800px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $base-font-family;
 }
 
 ul, ol {
@@ -14,7 +14,7 @@ ul {
 }
 
 h3 {
-  font-weight: 800;
+  font-weight: 300;
   margin-top: 2em;
 }
 
@@ -70,7 +70,7 @@ h3 {
   }
 }
 
-.page-home {
+.page-content {
   h2 {
     font-size: 22px;
     font-weight: 800;
@@ -81,13 +81,19 @@ h3 {
     font-weight: 600;
   }
   p {
-    font-size: 18px;
-    line-height: 1.9em;
-    margin: 0px auto 40px;
+    font-size: 15px;
+    line-height: 28px;
+    margin: 0px auto 24px;
 
     @media #{$mobile} {
-      font-size: 16px;
+      font-size: 15px;
     }
+  }
+  p + ul.first-meeting {
+    margin-top: -20px;
+  }
+  ul {
+    list-style-type: disc;
   }
   .section-title {
     font-size: 28px;
@@ -95,8 +101,8 @@ h3 {
     font-weight: 800;
   }
   li {
-    font-size: 18px;
-    line-height: 1.9em;
+    font-size: 15px;
+    line-height: 28px;
   }
 
   @media #{$tablet} {
